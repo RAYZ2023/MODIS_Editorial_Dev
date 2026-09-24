@@ -3195,3 +3195,6 @@ p:not(.founder-role) {
   }
 
 }
+.section-points .bold-point {
+  font-weight: 800;
+}
