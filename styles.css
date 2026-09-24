@@ -3218,3 +3218,83 @@ p:not(.founder-role) {
 .data-section {
   grid-template-columns: 1fr 1fr !important;
 }
+/* =========================================
+   MOBILE FIX AFTER DESKTOP COLUMN ALIGNMENT
+   ========================================= */
+
+@media (max-width: 820px) {
+
+  /* HERO
+     Copy full width, image full width underneath
+  */
+
+  .hero {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+  }
+
+  .hero-copy {
+    grid-column: 1 !important;
+    grid-row: 1 !important;
+  }
+
+  .hero-visual-wrap {
+    grid-column: 1 !important;
+    grid-row: 2 !important;
+    width: 100% !important;
+  }
+
+  .hero-art {
+    width: 100% !important;
+    margin-left: 0 !important;
+    min-height: 360px !important;
+  }
+
+
+  /* FRACTIONAL SERVICES
+     Image full width, copy full width underneath
+  */
+
+  #services {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+  }
+
+  #services .mountain-art {
+    grid-column: 1 !important;
+    grid-row: 1 !important;
+    order: 1 !important;
+    width: 100% !important;
+    min-height: 360px !important;
+  }
+
+  #services .feature-copy {
+    grid-column: 1 !important;
+    grid-row: 2 !important;
+    order: 2 !important;
+    width: 100% !important;
+  }
+
+
+  /* INTELLIGENCE
+     Keep bulb above copy
+  */
+
+  .data-section {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  .data-section .bulb-art {
+    order: 1 !important;
+    width: 100% !important;
+    min-height: 320px !important;
+  }
+
+  .data-section .feature-copy {
+    order: 2 !important;
+    width: 100% !important;
+  }
+
+}
+
