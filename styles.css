@@ -3198,3 +3198,23 @@ p:not(.founder-role) {
 .section-points .bold-point {
   font-weight: 800;
 }
+/* =========================================
+   ALIGN MAIN SECTION COLUMNS
+   ========================================= */
+
+/* Hero uses same center split as sections below */
+.hero {
+  grid-template-columns: 1fr 1fr !important;
+}
+
+/* Remove the hero image bleed that shifts the divider left */
+.hero-art {
+  width: 100% !important;
+  margin-left: 0 !important;
+}
+
+/* Keep feature sections on matching 50/50 columns */
+.feature,
+.data-section {
+  grid-template-columns: 1fr 1fr !important;
+}
