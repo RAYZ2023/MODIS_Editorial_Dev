@@ -4892,3 +4892,11 @@ p:not(.founder-role) {
   }
 
 }
+/* =========================================
+   MODIS DIAGRAM SCROLL ZOOM
+   ========================================= */
+
+.hww-diagram-card {
+  transform-origin: center center;
+  will-change: transform;
+}

@@ -47,6 +47,8 @@ const parallaxItems =
   Array.from(
     document.querySelectorAll(".parallax")
   );
+  const diagramCard =
+  document.querySelector(".hww-diagram-card");
 
 
 const reduceMotionQuery =
@@ -185,7 +187,7 @@ function requestParallaxUpdate() {
   parallaxTicking = true;
 
 
-  window.requestAnimationFrame(() => {
+  {
 
     updateParallax();
 
@@ -208,11 +210,15 @@ window.addEventListener(
   }
 );
 
+window.requestAnimationFrame(() => {
 
-window.addEventListener(
-  "resize",
-  requestParallaxUpdate
-);
+  updateParallax();
+
+  updateDiagramZoom();
+
+  parallaxTicking = false;
+
+});
 
 
 window.addEventListener(
@@ -249,6 +255,7 @@ if (window.visualViewport) {
 
 
 updateParallax();
+updateDiagramZoom();
 
 
 /* =========================================
