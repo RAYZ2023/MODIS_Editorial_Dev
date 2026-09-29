@@ -489,7 +489,7 @@
 
 
     <!-- =====================================
-         THE MODIS MODEL
+         MODIS MODEL
          ===================================== -->
 
     <section class="hww-model">
@@ -497,7 +497,7 @@
       <div class="hww-model-inner">
 
 
-        <!-- MODEL COPY -->
+        <!-- COPY -->
 
         <div class="hww-model-copy">
 
@@ -558,95 +558,305 @@
             >
 
 
-              <!-- OUTER ORBIT -->
+              <!-- SUBTLE CROSSHAIR -->
 
-              <circle
-                cx="300"
-                cy="300"
-                r="190"
-                class="hww-diagram-ring"
+              <line
+                x1="300"
+                y1="68"
+                x2="300"
+                y2="532"
+                class="hww-diagram-crosshair"
+              />
+
+              <line
+                x1="68"
+                y1="300"
+                x2="532"
+                y2="300"
+                class="hww-diagram-crosshair"
               />
 
 
-              <!-- INNER CORE -->
+              <!-- FRACTION / SEGMENT ORBITS -->
 
               <circle
                 cx="300"
                 cy="300"
-                r="96"
+                r="210"
+                class="hww-diagram-fractions"
+              />
+
+              <circle
+                cx="300"
+                cy="300"
+                r="200"
+                class="hww-diagram-fractions-alt"
+              />
+
+
+              <!-- GUIDE RINGS -->
+
+              <circle
+                cx="300"
+                cy="300"
+                r="218"
+                class="hww-diagram-guide"
+              />
+
+              <circle
+                cx="300"
+                cy="300"
+                r="172"
+                class="hww-diagram-ring"
+              />
+
+              <circle
+                cx="300"
+                cy="300"
+                r="136"
+                class="hww-diagram-inner-track"
+              />
+
+
+              <!-- CORE HALO -->
+
+              <circle
+                cx="300"
+                cy="300"
+                r="105"
+                class="hww-diagram-core-halo"
+              />
+
+              <circle
+                cx="300"
+                cy="300"
+                r="95"
                 class="hww-diagram-core-outline"
               />
 
               <circle
                 cx="300"
                 cy="300"
-                r="84"
+                r="82"
                 class="hww-diagram-core"
               />
 
 
               <!-- SPOKES -->
 
-              <line x1="300" y1="204" x2="300" y2="110" class="hww-diagram-spoke" />
+              <line
+                x1="300"
+                y1="196"
+                x2="300"
+                y2="128"
+                class="hww-diagram-spoke"
+              />
 
-              <line x1="368" y1="232" x2="434" y2="166" class="hww-diagram-spoke" />
+              <line
+                x1="374"
+                y1="226"
+                x2="422"
+                y2="178"
+                class="hww-diagram-spoke"
+              />
 
-              <line x1="396" y1="300" x2="490" y2="300" class="hww-diagram-spoke" />
+              <line
+                x1="404"
+                y1="300"
+                x2="472"
+                y2="300"
+                class="hww-diagram-spoke"
+              />
 
-              <line x1="368" y1="368" x2="434" y2="434" class="hww-diagram-spoke" />
+              <line
+                x1="374"
+                y1="374"
+                x2="422"
+                y2="422"
+                class="hww-diagram-spoke"
+              />
 
-              <line x1="300" y1="396" x2="300" y2="490" class="hww-diagram-spoke" />
+              <line
+                x1="300"
+                y1="404"
+                x2="300"
+                y2="472"
+                class="hww-diagram-spoke"
+              />
 
-              <line x1="232" y1="368" x2="166" y2="434" class="hww-diagram-spoke" />
+              <line
+                x1="226"
+                y1="374"
+                x2="178"
+                y2="422"
+                class="hww-diagram-spoke"
+              />
 
-              <line x1="204" y1="300" x2="110" y2="300" class="hww-diagram-spoke" />
+              <line
+                x1="196"
+                y1="300"
+                x2="128"
+                y2="300"
+                class="hww-diagram-spoke"
+              />
 
-              <line x1="232" y1="232" x2="166" y2="166" class="hww-diagram-spoke" />
+              <line
+                x1="226"
+                y1="226"
+                x2="178"
+                y2="178"
+                class="hww-diagram-spoke"
+              />
 
 
-              <!-- NODES -->
+              <!-- OUTER CONNECTORS -->
 
-              <circle cx="300" cy="110" r="7" class="hww-diagram-node" />
+              <line
+                x1="300"
+                y1="128"
+                x2="300"
+                y2="100"
+                class="hww-diagram-connector"
+              />
 
-              <circle cx="434" cy="166" r="7" class="hww-diagram-node" />
+              <line
+                x1="422"
+                y1="178"
+                x2="452"
+                y2="148"
+                class="hww-diagram-connector"
+              />
 
-              <circle cx="490" cy="300" r="7" class="hww-diagram-node" />
+              <line
+                x1="472"
+                y1="300"
+                x2="506"
+                y2="300"
+                class="hww-diagram-connector"
+              />
 
-              <circle cx="434" cy="434" r="7" class="hww-diagram-node" />
+              <line
+                x1="422"
+                y1="422"
+                x2="452"
+                y2="452"
+                class="hww-diagram-connector"
+              />
 
-              <circle cx="300" cy="490" r="7" class="hww-diagram-node" />
+              <line
+                x1="300"
+                y1="472"
+                x2="300"
+                y2="508"
+                class="hww-diagram-connector"
+              />
 
-              <circle cx="166" cy="434" r="7" class="hww-diagram-node" />
+              <line
+                x1="178"
+                y1="422"
+                x2="148"
+                y2="452"
+                class="hww-diagram-connector"
+              />
 
-              <circle cx="110" cy="300" r="7" class="hww-diagram-node" />
+              <line
+                x1="128"
+                y1="300"
+                x2="94"
+                y2="300"
+                class="hww-diagram-connector"
+              />
 
-              <circle cx="166" cy="166" r="7" class="hww-diagram-node" />
+              <line
+                x1="178"
+                y1="178"
+                x2="148"
+                y2="148"
+                class="hww-diagram-connector"
+              />
+
+
+              <!-- ORANGE NODES -->
+
+              <circle
+                cx="300"
+                cy="128"
+                r="7"
+                class="hww-diagram-node"
+              />
+
+              <circle
+                cx="422"
+                cy="178"
+                r="7"
+                class="hww-diagram-node"
+              />
+
+              <circle
+                cx="472"
+                cy="300"
+                r="7"
+                class="hww-diagram-node"
+              />
+
+              <circle
+                cx="422"
+                cy="422"
+                r="7"
+                class="hww-diagram-node"
+              />
+
+              <circle
+                cx="300"
+                cy="472"
+                r="7"
+                class="hww-diagram-node"
+              />
+
+              <circle
+                cx="178"
+                cy="422"
+                r="7"
+                class="hww-diagram-node"
+              />
+
+              <circle
+                cx="128"
+                cy="300"
+                r="7"
+                class="hww-diagram-node"
+              />
+
+              <circle
+                cx="178"
+                cy="178"
+                r="7"
+                class="hww-diagram-node"
+              />
 
 
               <!-- LABELS -->
 
               <text
                 x="300"
-                y="72"
+                y="73"
                 text-anchor="middle"
                 class="hww-diagram-label"
               >
                 STRATEGY
               </text>
 
-
               <text
-                x="465"
-                y="137"
+                x="473"
+                y="143"
                 text-anchor="start"
                 class="hww-diagram-label"
               >
                 MEDIA
               </text>
 
-
               <text
-                x="515"
+                x="523"
                 y="306"
                 text-anchor="start"
                 class="hww-diagram-label"
@@ -654,9 +864,8 @@
                 TECHNOLOGY
               </text>
 
-
               <text
-                x="465"
+                x="473"
                 y="474"
                 text-anchor="start"
                 class="hww-diagram-label"
@@ -664,19 +873,17 @@
                 PRODUCTION
               </text>
 
-
               <text
                 x="300"
-                y="544"
+                y="548"
                 text-anchor="middle"
                 class="hww-diagram-label"
               >
                 CREATIVE
               </text>
 
-
               <text
-                x="135"
+                x="127"
                 y="474"
                 text-anchor="end"
                 class="hww-diagram-label"
@@ -684,9 +891,8 @@
                 BRAND
               </text>
 
-
               <text
-                x="85"
+                x="77"
                 y="306"
                 text-anchor="end"
                 class="hww-diagram-label"
@@ -694,10 +900,9 @@
                 DATA
               </text>
 
-
               <text
-                x="135"
-                y="137"
+                x="127"
+                y="143"
                 text-anchor="end"
                 class="hww-diagram-label"
               >
@@ -709,17 +914,16 @@
 
               <text
                 x="300"
-                y="294"
+                y="292"
                 text-anchor="middle"
                 class="hww-diagram-core-title"
               >
                 ANDY + CHRIS
               </text>
 
-
               <text
                 x="300"
-                y="324"
+                y="322"
                 text-anchor="middle"
                 class="hww-diagram-core-subtitle"
               >
@@ -736,7 +940,9 @@
       </div>
 
 
-      <!-- CORE / FRACTIONS / WHOLE -->
+      <!-- =====================================
+           CORE / FRACTIONS / WHOLE
+           ===================================== -->
 
       <div class="hww-model-points">
 
@@ -790,7 +996,7 @@
 
 
     <!-- =====================================
-         WHAT WORKING WITH US FEELS LIKE
+         EXPERIENCE
          ===================================== -->
 
     <section class="hww-experience paper">
@@ -804,9 +1010,7 @@
 
         <article>
 
-          <strong>
-            01
-          </strong>
+          <strong>01</strong>
 
           <h3>
             SENIOR PEOPLE,<br>
@@ -823,9 +1027,7 @@
 
         <article>
 
-          <strong>
-            02
-          </strong>
+          <strong>02</strong>
 
           <h3>
             CLEAR<br>
@@ -841,9 +1043,7 @@
 
         <article>
 
-          <strong>
-            03
-          </strong>
+          <strong>03</strong>
 
           <h3>
             THE RIGHT<br>
@@ -860,9 +1060,7 @@
 
         <article>
 
-          <strong>
-            04
-          </strong>
+          <strong>04</strong>
 
           <h3>
             BUILT<br>
@@ -878,9 +1076,7 @@
 
         <article>
 
-          <strong>
-            05
-          </strong>
+          <strong>05</strong>
 
           <h3>
             WE LEAVE<br>
