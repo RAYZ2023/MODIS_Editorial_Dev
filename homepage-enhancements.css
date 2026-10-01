@@ -1,0 +1,210 @@
+/* MODIS HOMEPAGE ENHANCEMENTS */
+
+.home-section-stepper {
+  position: fixed;
+  right: 22px;
+  top: 50%;
+  z-index: 90;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  transform: translateY(-50%);
+  font-family: "Barlow Condensed", sans-serif;
+}
+
+.home-section-stepper::before {
+  content: "";
+  position: absolute;
+  top: 39px;
+  bottom: 39px;
+  left: 50%;
+  width: 1px;
+  z-index: -1;
+  background: rgba(18,49,66,.22);
+  transform: translateX(-50%);
+}
+
+.home-stepper-label {
+  margin-bottom: 2px;
+  color: #f1542a;
+  font-size: 10px;
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: .18em;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+}
+
+.home-stepper-dot {
+  width: 12px;
+  height: 12px;
+  padding: 0;
+  border: 1px solid rgba(18,49,66,.55);
+  border-radius: 50%;
+  background: #f3ecdb;
+  cursor: pointer;
+  appearance: none;
+  transition: transform .18s ease, background-color .18s ease, border-color .18s ease;
+}
+
+.home-stepper-dot:hover {
+  transform: scale(1.25);
+  border-color: #f1542a;
+}
+
+.home-stepper-dot.is-active {
+  border-color: #f1542a;
+  background: #f1542a;
+  transform: scale(1.25);
+}
+
+.home-stepper-next {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  margin-top: 2px;
+  padding: 0;
+  border: 1px solid rgba(18,49,66,.32);
+  border-radius: 50%;
+  color: #123142;
+  background: rgba(243,236,219,.94);
+  cursor: pointer;
+  font-size: 18px;
+  line-height: 1;
+  box-shadow: 0 4px 18px rgba(18,49,66,.08);
+  transition: transform .18s ease, color .18s ease, border-color .18s ease, background-color .18s ease;
+}
+
+.home-stepper-next:hover {
+  color: #f3ecdb;
+  border-color: #f1542a;
+  background: #f1542a;
+  transform: translateY(2px);
+}
+
+.home-section-stepper.is-over-dark .home-stepper-dot {
+  border-color: rgba(243,236,219,.62);
+  background: rgba(8,10,9,.75);
+}
+
+.home-section-stepper.is-over-dark .home-stepper-dot.is-active {
+  border-color: #f1542a;
+  background: #f1542a;
+}
+
+.home-section-stepper.is-over-dark::before {
+  background: rgba(243,236,219,.22);
+}
+
+.home-section-stepper.is-over-dark .home-stepper-next {
+  color: #f3ecdb;
+  border-color: rgba(243,236,219,.38);
+  background: rgba(8,10,9,.78);
+}
+
+.home-back-top-wrap {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 5vw 34px;
+  background: #080a09;
+}
+
+.home-back-top {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: #f3ecdb;
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 14px;
+  font-weight: 900;
+  letter-spacing: .08em;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: color .18s ease, transform .18s ease;
+}
+
+.home-back-top-arrow {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border: 1px solid rgba(243,236,219,.35);
+  border-radius: 50%;
+  font-size: 18px;
+  line-height: 1;
+  transition: border-color .18s ease, background-color .18s ease;
+}
+
+.home-back-top:hover {
+  color: #f1542a;
+  transform: translateY(-2px);
+}
+
+.home-back-top:hover .home-back-top-arrow {
+  border-color: #f1542a;
+}
+
+@media (max-width: 900px) {
+  .home-section-stepper {
+    right: 10px;
+    gap: 8px;
+  }
+
+  .home-stepper-label {
+    display: none;
+  }
+
+  .home-stepper-dot {
+    width: 10px;
+    height: 10px;
+  }
+
+  .home-stepper-next {
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
+  }
+
+  .home-section-stepper::before {
+    top: 12px;
+    bottom: 34px;
+  }
+}
+
+@media (max-width: 620px) {
+  .home-section-stepper {
+    right: 8px;
+  }
+
+  .home-stepper-dot {
+    width: 9px;
+    height: 9px;
+  }
+
+  .home-stepper-next {
+    width: 28px;
+    height: 28px;
+  }
+
+  .home-back-top-wrap {
+    padding-right: 24px;
+    padding-left: 24px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto !important;
+  }
+
+  .home-stepper-dot,
+  .home-stepper-next,
+  .home-back-top,
+  .home-back-top-arrow {
+    transition: none !important;
+  }
+}
