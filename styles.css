@@ -5529,4 +5529,264 @@ body {
   }
 
 }
+/* =========================================================
+   WHO WE ARE — REAL CLIENT LOGO MARQUEE
+   ========================================================= */
+
+.about-logo-marquee {
+  position: relative;
+  z-index: 3;
+
+  width: 100%;
+  overflow: hidden;
+
+  padding:
+    8px
+    0
+    18px;
+
+  border-top:
+    1px solid
+    rgba(243,236,219,.12);
+
+  border-bottom:
+    1px solid
+    rgba(243,236,219,.12);
+}
+
+
+/* soft fades at both ends */
+
+.about-logo-marquee::before,
+.about-logo-marquee::after {
+  content: "";
+
+  position: absolute;
+  top: 0;
+  bottom: 0;
+
+  z-index: 6;
+
+  width: min(8vw, 120px);
+
+  pointer-events: none;
+}
+
+.about-logo-marquee::before {
+  left: 0;
+
+  background:
+    linear-gradient(
+      90deg,
+      #080a09 0%,
+      rgba(8,10,9,.88) 28%,
+      transparent 100%
+    );
+}
+
+.about-logo-marquee::after {
+  right: 0;
+
+  background:
+    linear-gradient(
+      270deg,
+      #080a09 0%,
+      rgba(8,10,9,.88) 28%,
+      transparent 100%
+    );
+}
+
+
+/* each visible row */
+
+.about-logo-row {
+  width: 100%;
+  overflow: hidden;
+}
+
+.about-logo-row + .about-logo-row {
+  border-top:
+    1px solid
+    rgba(243,236,219,.08);
+}
+
+
+/* moving tracks */
+
+.about-logo-track {
+  display: flex;
+  align-items: center;
+
+  width: max-content;
+
+  will-change: transform;
+}
+
+.about-logo-track-a {
+  animation:
+    aboutLogoMarqueeLeft
+    54s
+    linear
+    infinite;
+}
+
+.about-logo-track-b {
+  animation:
+    aboutLogoMarqueeRight
+    62s
+    linear
+    infinite;
+}
+
+
+/* repeated groups create seamless motion */
+
+.about-logo-group {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+
+  gap:
+    clamp(
+      54px,
+      5vw,
+      94px
+    );
+
+  padding:
+    34px
+    clamp(
+      27px,
+      2.5vw,
+      48px
+    );
+}
+
+
+/* logo treatment */
+
+.about-logo-group img {
+  display: block;
+  flex: 0 0 auto;
+
+  width: auto;
+  height: 58px;
+
+  max-width: 190px;
+
+  object-fit: contain;
+
+  filter:
+    grayscale(1)
+    brightness(0)
+    invert(1);
+
+  opacity: .82;
+
+  transition:
+    opacity .2s ease,
+    transform .2s ease;
+}
+
+.about-logo-group img:hover {
+  opacity: 1;
+
+  transform:
+    scale(1.045);
+}
+
+
+/* balance distinctive wordmarks */
+
+.about-logo-group img[alt="Disney"],
+.about-logo-group img[alt="Coca-Cola"],
+.about-logo-group img[alt="Jack Daniel's"] {
+  height: 64px;
+}
+
+.about-logo-group img[alt="United Way"],
+.about-logo-group img[alt="Bayer"],
+.about-logo-group img[alt="Clemson University"] {
+  height: 54px;
+}
+
+
+/* opposite-direction marquee */
+
+@keyframes aboutLogoMarqueeLeft {
+
+  from {
+    transform:
+      translateX(0);
+  }
+
+  to {
+    transform:
+      translateX(-50%);
+  }
+
+}
+
+@keyframes aboutLogoMarqueeRight {
+
+  from {
+    transform:
+      translateX(-50%);
+  }
+
+  to {
+    transform:
+      translateX(0);
+  }
+
+}
+
+
+/* =========================================================
+   TABLET / MOBILE
+   ========================================================= */
+
+@media (max-width: 820px) {
+
+  .about-logo-marquee {
+    padding-top: 4px;
+    padding-bottom: 10px;
+  }
+
+  .about-logo-group {
+    gap: 46px;
+
+    padding:
+      27px
+      24px;
+  }
+
+  .about-logo-group img {
+    max-width: 145px;
+    height: 46px;
+  }
+
+  .about-logo-group img[alt="Disney"],
+  .about-logo-group img[alt="Coca-Cola"],
+  .about-logo-group img[alt="Jack Daniel's"] {
+    height: 50px;
+  }
+
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .about-logo-track-a,
+  .about-logo-track-b {
+    animation-play-state: paused;
+  }
+
+}
+
+
 
