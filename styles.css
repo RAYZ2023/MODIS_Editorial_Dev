@@ -5226,4 +5226,307 @@ body {
   }
 
 }
+/* =========================================================
+   MODIS MODEL — FINAL LAYOUT
+   ========================================================= */
+
+.hww-model {
+  position: relative;
+  width: 100%;
+  max-width: none;
+  overflow: hidden;
+
+  padding:
+    78px
+    5vw
+    0;
+
+  box-sizing: border-box;
+}
+
+
+/* TOP TWO-COLUMN AREA */
+
+.hww-model-inner {
+  position: relative;
+  z-index: 2;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.04fr)
+    minmax(460px, .96fr);
+
+  gap: clamp(50px, 5vw, 92px);
+
+  width: 100%;
+  max-width: none;
+
+  align-items: center;
+}
+
+
+/* DIAGRAM */
+
+.hww-diagram-wrap {
+  position: relative;
+
+  width: 100%;
+  min-width: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hww-diagram-image-card {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  min-height: 620px;
+
+  padding: 20px;
+
+  overflow: visible;
+
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+}
+
+.hww-model-diagram-image {
+  position: relative;
+
+  display: block;
+
+  width: min(118%, 780px);
+  height: auto;
+  max-width: none;
+
+  object-fit: contain;
+
+  will-change: transform;
+
+  filter:
+    drop-shadow(
+      0 18px 26px rgba(0,0,0,.22)
+    );
+}
+
+
+/* =========================================================
+   CORE / FRACTIONS / WHOLE — TRUE FULL WIDTH
+   ========================================================= */
+
+.hww-model-points {
+  position: relative;
+  z-index: 5;
+
+  display: grid !important;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr)) !important;
+
+  width: 100% !important;
+  max-width: none !important;
+
+  margin:
+    68px
+    0
+    0 !important;
+
+  padding: 0 !important;
+
+  box-sizing: border-box;
+
+  border-top:
+    1px solid
+    rgba(243,236,219,.18);
+}
+
+
+/* each third */
+
+.hww-model-points article,
+.hww-model-points article + article {
+  position: relative;
+
+  width: auto !important;
+  min-width: 0 !important;
+  max-width: none !important;
+
+  margin: 0 !important;
+
+  padding:
+    38px
+    clamp(34px, 4vw, 70px)
+    48px !important;
+
+  box-sizing: border-box;
+
+  border-right:
+    1px solid
+    rgba(241,84,42,.55);
+
+  border-bottom: 0 !important;
+}
+
+
+/* align outer edges with page content */
+
+.hww-model-points article:first-child {
+  padding-left: 0 !important;
+}
+
+.hww-model-points article:last-child {
+  padding-right: 0 !important;
+  border-right: 0;
+}
+
+
+/* typography */
+
+.hww-model-points h3 {
+  margin: 0 0 18px;
+
+  color: var(--paper);
+
+  font-family:
+    "Barlow Condensed",
+    sans-serif;
+
+  font-size:
+    clamp(
+      46px,
+      4vw,
+      68px
+    );
+
+  font-weight: 900;
+
+  line-height: .82;
+
+  text-transform: uppercase;
+}
+
+
+.hww-model-points p {
+  width: 100%;
+  max-width: 390px;
+
+  margin: 0;
+
+  color:
+    rgba(243,236,219,.82);
+
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1100px) {
+
+  .hww-model {
+    padding-left: 34px;
+    padding-right: 34px;
+  }
+
+  .hww-model-inner {
+    grid-template-columns:
+      minmax(0, 1fr)
+      minmax(390px, .9fr);
+
+    gap: 32px;
+  }
+
+  .hww-model-diagram-image {
+    width: min(114%, 660px);
+  }
+
+  .hww-model-points article,
+  .hww-model-points article + article {
+    padding:
+      32px
+      30px
+      40px !important;
+  }
+
+  .hww-model-points article:first-child {
+    padding-left: 0 !important;
+  }
+
+  .hww-model-points article:last-child {
+    padding-right: 0 !important;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 820px) {
+
+  .hww-model {
+    padding:
+      52px
+      24px
+      0;
+  }
+
+  .hww-model-inner {
+    grid-template-columns: 1fr;
+    gap: 34px;
+  }
+
+  .hww-diagram-image-card {
+    min-height: 0;
+    padding: 10px 0;
+  }
+
+  .hww-model-diagram-image {
+    width: min(110%, 620px);
+  }
+
+
+  .hww-model-points {
+    grid-template-columns: 1fr !important;
+
+    margin-top: 38px !important;
+  }
+
+  .hww-model-points article,
+  .hww-model-points article + article,
+  .hww-model-points article:first-child,
+  .hww-model-points article:last-child {
+    padding:
+      28px
+      0
+      32px !important;
+
+    border-right: 0;
+
+    border-bottom:
+      1px solid
+      rgba(241,84,42,.45) !important;
+  }
+
+  .hww-model-points article:last-child {
+    border-bottom: 0 !important;
+  }
+
+  .hww-model-points p {
+    max-width: 520px;
+  }
+
+}
 
